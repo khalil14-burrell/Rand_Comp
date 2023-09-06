@@ -1,0 +1,72 @@
+@keyframes example {
+  from {
+    background-color: rgb(236, 75, 16);
+  }
+
+  to {
+    background-color: rgb(224, 165, 39);
+  }
+}
+
+/* Define the bounce animation */
+/* Define the rainbowPath animation */
+@keyframes arcPath {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(50vw) translateY(-50vh) rotate(-45deg);
+  }
+
+  100% {
+    transform: translateX(100vw) translateY(0) rotate(-90deg);
+  }
+}
+
+
+
+body {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(239, 239, 247);
+  animation: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+h1 {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  text-shadow: 5px;
+  width: 120px;
+  height: 40px;
+}
+
+#compliment {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  animation: arcPath 8s linear infinite;
+  /* Adjust the duration as needed */
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+}

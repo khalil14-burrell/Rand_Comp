@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Compliment Generator</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <h1>Random Compliment Generator</h1>
+  <p id="compliment"></p>
+  <button onclick="generateCompliment()">Generate Compliment</button>
+
+  <script>
+    function generateCompliment() {
+      // Get the list of compliments
+      var compliments = [
+        "You're a great person!",
+        "You're so smart!",
+        "You're really funny!",
+        "You're so kind!",
+        "You're so talented!",
+        "You're so beautiful!",
+        "You're so handsome!",
+        "You're so amazing!",
+        "You're so wonderful!",
+        "You're so perfect!"
+      ];
+
+      // Generate a random compliment
+      var random_compliment = compliments[Math.floor(Math.random() * compliments.length)];
+
+      // Set the innerHTML of the compliment element to the random compliment
+      document.getElementById("compliment").innerHTML = random_compliment;
+    }
+  </script>
+</body>
+</html>
